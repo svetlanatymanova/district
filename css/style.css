@@ -30,7 +30,7 @@ body {
   color: #000000;
   line-height: 1;
   font-family: "";
-  font-size: 1rem;
+  font-size: 1.5625rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -122,7 +122,7 @@ h6 {
 
 [class*=__container] {
   margin: 0 auto;
-  max-width: 76.8rem;
+  max-width: 120rem;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
 }
@@ -213,13 +213,13 @@ h6 {
 }
 
 .btn-black:hover {
-  outline: 1px solid #ffffff;
+  outline: 2px solid #ffffff;
 }
 
 h2 {
   display: inline-block;
   font-family: AgencyFB;
-  font-size: 3.48rem;
+  font-size: 5.4375rem;
   font-weight: bold;
   letter-spacing: 0.0872em;
   text-transform: uppercase;
@@ -234,7 +234,7 @@ h2 {
 
 .subtitle {
   font-family: AgencyFB;
-  font-size: 1rem;
+  font-size: 1.5625rem;
   font-weight: bold;
   line-height: 1.52;
   letter-spacing: 0.0252em;
@@ -264,16 +264,16 @@ h2 {
   height: 3.68em;
 }
 
-@supports (font-size: clamp( 0.8rem , -2.0571428571rem  +  4.7619047619vw , 1.6rem )) {
+@supports (font-size: clamp( 1.25rem , -0.625rem  +  2vw , 1.875rem )) {
   .header__content {
-    font-size: clamp( 0.8rem , -2.0571428571rem  +  4.7619047619vw , 1.6rem );
+    font-size: clamp( 1.25rem , -0.625rem  +  2vw , 1.875rem );
   }
 }
 
-@supports not (font-size: clamp( 0.8rem , -2.0571428571rem  +  4.7619047619vw , 1.6rem )) {
+@supports not (font-size: clamp( 1.25rem , -0.625rem  +  2vw , 1.875rem )) {
   .header__content {
     font-size: calc(
-			0.8rem + 0.8 * (100vw - 60rem) / 16.8
+			1.25rem + 0.625 * (100vw - 93.75rem) / 31.25
 		);
   }
 }
@@ -298,7 +298,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2.8em;
+  gap: 2em;
   justify-self: flex-end;
 }
 
@@ -316,6 +316,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 2px;
 }
 
 .header__button {
@@ -346,7 +347,7 @@ h2 {
 }
 
 .footer {
-  margin-top: 4rem;
+  margin-top: 6.25rem;
   background: #fafbff;
 }
 
@@ -358,17 +359,17 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-top: 1px solid rgba(236, 122, 33, 0.5);
-  padding: 0.8rem 0;
+  padding: 1.25rem 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.9375rem;
 }
 
 .footer__links {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  gap: 2.32rem;
+  gap: 3.625rem;
 }
 
 .footer__link {
@@ -377,8 +378,8 @@ h2 {
   display: inline-flex;
   font-family: "Gilroy";
   font-weight: 400;
-  font-size: 0.6rem;
-  line-height: 0.68rem;
+  font-size: 0.9375rem;
+  line-height: 1.0625rem;
   color: rgb(0, 0, 0);
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -400,25 +401,37 @@ h2 {
   left: 0;
 }
 
+.main {
+  margin-top: 110.39px;
+}
+
+@supports (margin-top: clamp( 4.0625rem , -4.448125rem  +  9.078vw , 6.899375rem )) {
+  .main {
+    margin-top: clamp( 4.0625rem , -4.448125rem  +  9.078vw , 6.899375rem );
+  }
+}
+
+@supports not (margin-top: clamp( 4.0625rem , -4.448125rem  +  9.078vw , 6.899375rem )) {
+  .main {
+    margin-top: calc(
+			4.0625rem + 2.836875 * (100vw - 93.75rem) / 31.25
+		);
+  }
+}
+
 .main__swiper {
   position: relative;
-  margin-bottom: 100px;
-  margin-top: 5.6em;
 }
 
 .main__swiper::after {
   content: url("../img/decor2.png");
   z-index: 12;
   position: absolute;
-  top: 100%;
+  top: 85%;
   left: 50%;
-  -webkit-transform: translate(-100%, -50%);
-      -ms-transform: translate(-100%, -50%);
-          transform: translate(-100%, -50%);
-}
-
-.main__section-row {
-  margin-top: -100px;
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
 }
 
 .section-main__container {
@@ -443,7 +456,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 2.24rem;
+  gap: 3.5rem;
   position: relative;
 }
 
@@ -516,15 +529,15 @@ h2 {
 
 .section-production__subtitle {
   text-align: center;
-  margin-top: 0.8rem;
+  margin-top: 1.25rem;
 }
 
 .no-webp .section-production__slider{
-  background: url("../img/decor.png") no-repeat 100% 0%/8.8rem 7.2rem, url("../img/decor2.png") no-repeat 2% 100%/10rem 7.2rem; }
+  background: url("../img/decor.png") no-repeat 100% 0%/13.75rem 11.25rem, url("../img/decor2.png") no-repeat 2% 100%/15.625rem 11.25rem; }
 
 .section-production__slider {
-  margin-top: 3.2rem;
-  padding-bottom: 1.2rem;
+  margin-top: 5rem;
+  padding-bottom: 1.875rem;
   text-align: center;
 }
 
@@ -541,7 +554,7 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   max-width: 100%;
-  font-size: 0.64rem;
+  font-size: 1rem;
 }
 
 .item {
@@ -586,10 +599,10 @@ h2 {
 .item__title {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin-top: 0.8rem;
+  margin-top: 1.25rem;
   font-family: "Gilroy";
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 1.25rem;
   line-height: 120%;
   color: #000000;
 }
@@ -598,7 +611,7 @@ h2 {
   width: 100%;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin-top: 0.6rem;
+  margin-top: 0.9375rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -610,7 +623,7 @@ h2 {
 .item__width {
   font-family: "Gilroy";
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 1.25rem;
   line-height: 120%;
   color: #000000;
 }
@@ -619,7 +632,7 @@ h2 {
   font-family: "Gilroy";
   white-space: nowrap;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 1.25rem;
   line-height: 130%;
   color: #ffa64d;
 }
@@ -629,7 +642,7 @@ h2 {
 }
 
 .item__button {
-  margin-top: 1.28rem;
+  margin-top: 2rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -645,15 +658,15 @@ h2 {
 
 .section-what__container {
   z-index: 2;
-  padding-bottom: 5.2rem;
+  padding-bottom: 8.125rem;
 }
 
 .section-what__title {
-  padding-top: 4.8rem;
+  padding-top: 7.5rem;
 }
 
 .section-what__advantages {
-  padding-top: 3.2rem;
+  padding-top: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,7 +690,7 @@ h2 {
   -webkit-backdrop-filter: blur(35px);
           backdrop-filter: blur(35px);
   border-radius: 16px;
-  padding: 1.6rem 1.6rem 2rem 1.6rem;
+  padding: 2.5rem 2.5rem 3.125rem 2.5rem;
 }
 
 .advantage__content {
@@ -697,8 +710,8 @@ h2 {
   position: relative;
   top: 0;
   left: 0;
-  width: 4.4rem;
-  height: 4.4rem;
+  width: 6.875rem;
+  height: 6.875rem;
 }
 
 .advantage__icon svg {
@@ -710,7 +723,7 @@ h2 {
   margin-top: 0.92em;
   font-family: "Gilroy";
   font-weight: 400;
-  font-size: 0.72rem;
+  font-size: 1.125rem;
   line-height: 133%;
   text-align: center;
   color: #ffffff;
@@ -785,7 +798,7 @@ h2 {
   background: url("../img/quote.png") 0 0/190px 169px no-repeat; }
 
 .section-feed__content {
-  padding: 0 3.84rem;
+  padding: 0 6rem;
 }
 
 .section-feed__slider {
@@ -793,7 +806,7 @@ h2 {
 }
 
 .section-feed__wrapper {
-  padding-bottom: 2rem;
+  padding-bottom: 3.125rem;
 }
 
 .section-feed__quote {
@@ -837,7 +850,7 @@ h2 {
 }
 
 .section-feed__author {
-  margin-top: 1rem;
+  margin-top: 1.5625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -852,7 +865,7 @@ h2 {
 .section-feed__name {
   font-family: "Gilroy";
   font-weight: 500;
-  font-size: 0.96rem;
+  font-size: 1.5rem;
   line-height: 120%;
   color: #2d2d2d;
 }
@@ -895,7 +908,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 1.4rem;
+  gap: 2.1875rem;
 }
 
 .swiper-quotes-prev,
@@ -937,7 +950,7 @@ h2 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.75rem;
 }
 
 .section-map__container::after {
@@ -968,7 +981,7 @@ h2 {
 }
 
 .section-map__list {
-  margin-top: 1.6rem;
+  margin-top: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -976,7 +989,7 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.8rem;
+  gap: 1.25rem;
 }
 
 .section-map__data {
@@ -986,7 +999,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.4rem;
+  gap: 0.625rem;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -1014,13 +1027,13 @@ h2 {
   display: inline-block;
   font-family: "Gilroy";
   font-weight: 500;
-  font-size: 0.72rem;
+  font-size: 1.125rem;
   line-height: 120%;
   color: #2d2d2d;
 }
 
 .section-map__icons {
-  margin-top: 2rem;
+  margin-top: 3.125rem;
 }
 
 .section-map__icons svg {
@@ -1034,7 +1047,7 @@ h2 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 75%;
           flex: 0 1 75%;
-  height: 20.48rem;
+  height: 32rem;
   position: relative;
   top: 0;
   left: 0;
@@ -1874,12 +1887,6 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
-@media (min-width: 1920px) {
-  .main__slider {
-    margin-top: 94.2px;
-  }
-}
-
 @media (max-width: 1920px) {
   .swiper-slide__img img {
     max-width: 100%;
@@ -1893,7 +1900,7 @@ button.swiper-pagination-bullet {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    font-size: 0.4rem;
+    font-size: 0.625rem;
   }
 
   .item {
@@ -1903,7 +1910,7 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 78em) {
   [class*=__container] {
-    max-width: 38.8rem;
+    max-width: 60.625rem;
   }
 
   .section-main__container::before {
@@ -1938,6 +1945,12 @@ button.swiper-pagination-bullet {
   }
 }
 
+@media (max-width: 60em) {
+  .main {
+    margin-top: inherit;
+  }
+}
+
 @media (max-width: 750px) {
   .section-main__container::before {
     right: 35%;
@@ -1946,7 +1959,7 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 650px) {
   .section-main {
-    font-size: 0.4rem;
+    font-size: 0.625rem;
   }
 
   .section-main__content {
@@ -1991,7 +2004,7 @@ button.swiper-pagination-bullet {
     -webkit-transform: translate(0, 0%);
         -ms-transform: translate(0, 0%);
             transform: translate(0, 0%);
-    padding-top: 0.4rem;
+    padding-top: 0.625rem;
     width: 100%;
     position: relative;
     top: 0;
@@ -2016,7 +2029,7 @@ button.swiper-pagination-bullet {
   }
 
   .section-main__icons {
-    font-size: 0.24rem;
+    font-size: 0.375rem;
   }
 
   .section-main__icons .icon {
@@ -2031,14 +2044,14 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 39.6792em) {
   [class*=__container] {
-    max-width: 30rem;
+    max-width: 46.875rem;
   }
 
   .icon-menu {
     display: block;
     position: relative;
-    width: 1.2rem;
-    height: 0.72rem;
+    width: 1.875rem;
+    height: 1.125rem;
     cursor: pointer;
     z-index: 5;
   }
@@ -2053,7 +2066,7 @@ button.swiper-pagination-bullet {
     right: 0;
     position: absolute;
     width: 100%;
-    height: 0.08rem;
+    height: 0.125rem;
     background-color: #ffffff;
   }
 
@@ -2066,7 +2079,7 @@ button.swiper-pagination-bullet {
   }
 
   .icon-menu span {
-    top: calc(50% - 0.04rem);
+    top: calc(50% - 0.0625rem);
   }
 
   .menu-open .icon-menu span {
@@ -2074,14 +2087,14 @@ button.swiper-pagination-bullet {
   }
 
   .menu-open .icon-menu::before {
-    top: calc(50% - 0.04rem);
+    top: calc(50% - 0.0625rem);
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
 
   .menu-open .icon-menu::after {
-    bottom: calc(50% - 0.04rem);
+    bottom: calc(50% - 0.0625rem);
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
@@ -2097,11 +2110,11 @@ button.swiper-pagination-bullet {
 @media (max-width: 30.7192em) {
   [class*=__container] {
     max-width: none;
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
   }
 }
 
-.webp .section-production__slider{ background: url(../img/decor.webp) no-repeat 100% 0%/8.8rem 7.2rem, url(../img/decor2.webp) no-repeat 2% 100%/10rem 7.2rem; }
+.webp .section-production__slider{ background: url(../img/decor.webp) no-repeat 100% 0%/13.75rem 11.25rem, url(../img/decor2.webp) no-repeat 2% 100%/15.625rem 11.25rem; }
 
 .webp .section-feed__container{ background: url(../img/quote.webp) 0 0/190px 169px no-repeat; }

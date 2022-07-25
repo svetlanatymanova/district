@@ -23,7 +23,7 @@
 html,
 body {
   height: 100%;
-  min-width: 320px;
+  min-width: 1100px;
 }
 
 body {
@@ -283,7 +283,7 @@ h2 {
 
 .header__logo svg {
   width: 9.52em;
-  height: 3.68em;
+  height: 4.88em;
   fill: #ffffff;
 }
 
@@ -308,10 +308,14 @@ h2 {
 .header__link svg {
   fill: #ffffff;
   width: 3.2em;
-  height: 2.32em;
+  height: 4.32em;
 }
 
 .header__link:hover svg {
+  fill: #2dd5ff;
+}
+
+.header__link-ds svg:hover {
   fill: #137bcf;
 }
 
@@ -551,6 +555,7 @@ h2 {
           flex: 0 0 calc(50% - 1.44em);
   margin-left: 1.44em;
   position: relative;
+  z-index: 5;
 }
 
 .section-row__img img {
@@ -659,6 +664,9 @@ h2 {
 }
 
 .section-gameroom__title {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   margin-left: 0.4em;
 }
 
@@ -667,7 +675,24 @@ h2 {
 }
 
 .section-gameroom__decor {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   z-index: 9;
+  height: 6.64em;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.section-gameroom__decor img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .section-gameroom__img {
@@ -725,11 +750,11 @@ h2 {
 .section-machine__content::after {
   content: "";
   position: absolute;
-  top: -15.625rem;
+  top: -18.75rem;
   left: 50%;
   display: inline-block;
   width: 0.375rem;
-  height: calc(100% + 15.625rem);
+  height: calc(100% + 18.75rem);
   background: #e2622f;
   border-right: 2px solid #6e2a0f;
   z-index: 4;
@@ -755,6 +780,7 @@ h2 {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(50% - 1.4em);
           flex: 0 0 calc(50% - 1.4em);
+  z-index: 10;
 }
 
 .section-machine__title {
@@ -1688,9 +1714,23 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+@media (max-width: 2400px) {
+  .section-machine__content::after {
+    height: calc(100% + 37.5rem);
+    top: -37.5rem;
+  }
+}
+
 @media (max-width: 1920px) {
   .swiper-slide__img img {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 1800px) {
+  .keys img {
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 

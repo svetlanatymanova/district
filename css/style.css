@@ -743,7 +743,7 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 1.4em;
+  gap: 1.8em;
   position: relative;
 }
 
@@ -787,6 +787,7 @@ h2 {
   z-index: 10;
   width: 100%;
   text-align: center;
+  white-space: nowrap;
 }
 
 .section-machine__title-right {
